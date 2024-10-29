@@ -44,7 +44,7 @@ const resolvers = {
       // Resolve the 'me' query based on logged-in user
     },
     books: async () => {
-      // Resolve the 'books' query
+      // Risolve the 'books' query
     },
   },
   Mutation: {
