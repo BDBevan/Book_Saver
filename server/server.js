@@ -7,7 +7,7 @@ const { typeDefs, resolvers } = require('./graphql/schema'); // Your GraphQL sch
 const { authMiddleware } = require('./utils/auth'); // Import the modified authMiddleware
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 // Initialize Apollo Server with typeDefs, resolvers, and authentication middleware in the context
 const server = new ApolloServer({
