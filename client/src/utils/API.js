@@ -155,7 +155,6 @@ export const deleteBook = async (bookId) => {
   }
 };
 
-// Function to search Google Books (This remains unchanged as it's an external API call)
 export const searchGoogleBooks = (query) => {
   return fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
 };
