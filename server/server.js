@@ -7,7 +7,11 @@ const { typeDefs, resolvers } = require('./graphql/schema'); // Your GraphQL sch
 const { authMiddleware } = require('./utils/auth'); // Import the modified authMiddleware
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3010;
+
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 
 // Initialize Apollo Server with typeDefs, resolvers, and authentication middleware in the context
 const server = new ApolloServer({
@@ -34,6 +38,7 @@ if (process.env.NODE_ENV === 'production') {
 
 // Use the existing routes for any remaining RESTful endpoints (if needed)
 app.use(routes);
+
 
 // Start the database connection and server
 db.once('open', () => {
